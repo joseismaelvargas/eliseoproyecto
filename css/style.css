@@ -1,0 +1,33 @@
+.page{
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0px 35px;
+    text-align: center;
+}
+.logo{
+    border-radius: 50%;
+    width: 90px;
+}
+/* footer */
+.logo-footer{
+    border-radius: 50%;
+  
+}
+
+a>i{
+    color: rgb(19, 17, 17);
+}
+a>i:hover{
+    color: rgb(71, 69, 69);
+}
+
+.productos{
+    display: flex;
+    justify-content: space-around;
+}
+@media only screen and (max-width: 600px) {
+    .logo-footer{
+        width: 40px;
+    }
+}
