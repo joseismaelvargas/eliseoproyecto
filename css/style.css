@@ -8,6 +8,8 @@
 .logo{
     border-radius: 50%;
     width: 90px;
+    box-shadow: 0 4px 0 rgba(10, 10, 10, 0.7);
+    border: solid silver 8px;
 }
 /* main */
 .vermas{
