@@ -9,6 +9,11 @@
     border-radius: 50%;
     width: 90px;
 }
+/* main */
+.vermas{
+    text-decoration: none;
+    border: none;
+}
 /* footer */
 .logo-footer{
     border-radius: 50%;
