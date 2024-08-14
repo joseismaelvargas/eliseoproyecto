@@ -87,6 +87,7 @@ a>i:hover{
 }
 .carasteristicas{
     text-align: start;
+    /* font-size: 10px; */
 }
 .nameproducto{
     font-family: sans-serif;
@@ -114,5 +115,14 @@ a>i:hover{
     .container-productos{
         display: flex;
         flex-direction: column;
+    }
+    .carasteristicas{
+        font-size: 13px;
+    }
+    .nameproducto{
+        font-size: 35px;
+    }
+    .precio{
+        font-size: 35px;
     }
 }
