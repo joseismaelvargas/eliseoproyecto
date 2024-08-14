@@ -1,7 +1,7 @@
 const padre=document.getElementById("padre")
 
+const vermas=document.getElementById("vermas")
 
-const parrafo=document.getElementById("parrafo")
 
 let parrafonew=document.createElement("p")
 parrafonew.classList.add="parrafo"
@@ -10,6 +10,7 @@ vermas.addEventListener("click",()=>{
       parrafonew.innerText="Para mantener una estética uniforme y profesional en nuestra página de ventas de productos, hemos actualizado el estilo de los íconos de redes sociales a un elegante color negro. Esta modificación asegura que los íconos de Facebook, Instagram, YouTube y TikTok se presenten en negro tanto en estado normal como al pasar el cursor sobre ellos. Esta decisión de diseño se ha tomado con el objetivo de mejorar la apariencia visual de nuestra página y proporcionar una experiencia de usuario coherente y moderna, alineada con la identidad de nuestra marca."
       vermas.innerText="Ver menos..."
       parrafonew.style.display = "block";
+      console.log(padre)
       padre.insertBefore(parrafonew,vermas)
       
         console.log(padre.children)
