@@ -44,7 +44,7 @@ const buscarlocal=()=>{
 const dibujar=(element)=>{
     let tabla=document.querySelector("tbody")
     tabla.innerHTML+=`   <tr data-id="${element.id}">
-                    <td>${element.nombre}</td>
+                    <td>${element.precio}</td>
                     <td>${element.nombre}</td>
                     <td>
                         <button class="btn btn-primary">Ver</button>
