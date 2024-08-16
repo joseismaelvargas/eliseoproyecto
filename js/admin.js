@@ -1,7 +1,7 @@
 class Productos{
     constructor(nombre,precio,info,foto){
          this.nombre=nombre,
-        this.id=crypto.randomUUID(),
+        this.id= Date.now(),
         this.precio=precio,
         this.info=info,
         this.foto=foto
@@ -20,7 +20,7 @@ const precio=document.getElementById("precio")
 const foto=document.getElementById("foto")
 const info=document.getElementById("info")
 // 
-const array=[]
+const array=JSON.parse(localStorage.getItem('producto',))||[]
 
 const funcioform=(e)=>{
 e.preventDefault()
@@ -29,11 +29,43 @@ e.preventDefault()
  array.push(producto)
 
 limpiarform()
+guardar()//npmbre nnunca tiene que llamarse localstorage
+alert("Producto Agregado")
+location.reload()
+
+
 }
+const buscarlocal=()=>{
+  if(array.length!==0){
+    array.map((element)=>dibujar(element))
+  }
+    
+}
+const dibujar=(element)=>{
+    let tabla=document.querySelector("tbody")
+    tabla.innerHTML+=`   <tr data-id="${element.id}">
+                    <td>${element.id}</td>
+                    <td>${element.nombre}</td>
+                    <td>
+                        <button class="btn btn-primary">Ver</button>
+                        <button class="btn btn-warning">Editar</button>
+                        <button class="btn btn-danger" onclick="borrarElemento(${element.id})">Borrar</button>
+                    </td>  
+                </tr>`
+
+  window.borrarElemento=(id)=>{
+    alert(id)
+}
+}
+
 const limpiarform=()=>{
 
  form.reset()
 } 
+const guardar=()=>{
+localStorage.setItem('producto',JSON.stringify(array))
+}
 console.log(array)
 
 form.addEventListener("submit",funcioform)
+buscarlocal()//render va al final del codigo

@@ -47,15 +47,36 @@
 
 
    <main>
-    <section class="container"> 
-      <h1>Pagina Administrador</h1> 
+    <section class="title container d-flex justify-content-between"> 
+      <h2>Productos Agregados</h2> 
 
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
- Agregar Producto
+ Agregar
 </button>
          
    </section>
-   <!-- Button trigger modal -->
+  <section class="container">
+    <div class="table-responsive">
+     
+            <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Precio</th>
+            <th>Producto</th>
+            
+            <th>Acciones</th>
+          </tr>
+        </thead>
+      <tbody>
+    
+      </tbody>
+      </table>
+      
+  
+
+    </div>
+
+  </section>
 
 
 <!-- Modal -->
@@ -87,7 +108,7 @@
         <input type="text" id="precio"> ...
         </div>
        
-        <button class="btn btn-primary" type="submit">Agregar</button>
+        <button class="button-form btn btn-primary" type="submit" >Agregar</button>
         </form>
       </div>
       <!-- <div class="modal-footer">

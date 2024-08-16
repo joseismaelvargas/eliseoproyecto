@@ -36,11 +36,29 @@
     font-family: sans-serif;
     font-weight: bold;
 }
+#info{
+    width: 250px;
+}
+#nombre{
+width: 300px;
+height: 30px;}
+#foto{
+    width: 300px;
+    height: 30px;
+}
+.button-form{
+   width: 150px;
+   font-family: sans-serif;
+   font-weight: bold;
+}
 /* footer */
 .logo-footer{
     border-radius: 50%;
     box-shadow: 0px 5px rgb(114, 112, 112);
   
+}
+.title{
+    margin: 50px;
 }
 
 a>i{
@@ -92,8 +110,49 @@ a>i:hover{
         margin: 100px auto ;
         width: 400px;
      }
+     #button-form{
+        width: 150px;
+     }
+     #nombre{
+        border: solid 2px;
+        height: 50px;
+     }
+     
+     .nombre{
+        font-size: 22px;
+     }
+     .precioform{
+        font-size: 22px;
+     }
+     #precio{
+        border: solid 2px ;
+        height: 40px;
+     }
+     .button-form{
+        width: 150px;
+        height: 70px;
+        margin: 10px 70px;
+        font-size: 22px;
+        font-family: sans-serif;
+        font-weight: bold;
+        
+       
+     }
 
+     .info{
+        font-size: 22px;
+     }
+     .foto{
 
+        font-size: 22px;
+     }
+     #foto{
+        border: solid 2px;
+     }
+     #info{
+      border: solid 2px ;
+     }
+ 
     .logo-footer{
         width: 40px;
     }
@@ -122,5 +181,9 @@ a>i:hover{
     }
     .precio{
         font-size: 35px;
+    }
+    /* table */
+    .title{
+        margin: 50px auto;
     }
 }
