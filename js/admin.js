@@ -30,7 +30,7 @@ e.preventDefault()
 
 limpiarform()
 guardar()//npmbre nnunca tiene que llamarse localstorage
-alert("Producto Agregado")
+
 location.reload()
 
 
@@ -44,7 +44,7 @@ const buscarlocal=()=>{
 const dibujar=(element)=>{
     let tabla=document.querySelector("tbody")
     tabla.innerHTML+=`   <tr data-id="${element.id}">
-                    <td>${element.id}</td>
+                    <td>${element.nombre}</td>
                     <td>${element.nombre}</td>
                     <td>
                         <button class="btn btn-primary">Ver</button>
@@ -53,10 +53,17 @@ const dibujar=(element)=>{
                     </td>  
                 </tr>`
 
-  window.borrarElemento=(id)=>{
-    alert(id)
+    window.borrarElemento = (id) => {
+      const index = array.findIndex(element => element.id === id);
+      if (index !== -1) {
+          array.splice(index, 1);
+          guardar();
+         
+          document.querySelector(`tr[data-id="${id}"]`).remove();
+      }
+  };
 }
-}
+
 
 const limpiarform=()=>{
 
