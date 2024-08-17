@@ -124,10 +124,11 @@ const dibujar=(element)=>{
               text: "!Borrado con Exito!",
               icon: "success"
               
-            });
+            }); 
+            array.splice(index, 1);
           }
         });
-          array.splice(index, 1);
+         
           guardar();
          
           document.querySelector(`tr[data-id="${id}"]`).remove();

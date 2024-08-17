@@ -22,7 +22,7 @@
     width: 300px;
     height: auto;
     border-radius: 10px;
-    border: solid rgb(85, 83, 83) 2px;
+    /* border: solid rgb(85, 83, 83) 2px; */
    
 }
 .caja:hover{
@@ -35,7 +35,8 @@
 .info{
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: start;
+
 }
 
 
@@ -69,13 +70,14 @@ a>i:hover{
 }
 .carasteristicas{
     font-family: sans-serif;
-    font-weight: bold;
+    font-weight: 600;
+    color: rgb(20, 89, 145);
     
 }
 .precio{
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
 }
 .WhatsApp{
     font-size: 40px;
@@ -92,7 +94,7 @@ a>i:hover{
 .nameproducto{
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 21px;
 
 }
 @media only screen and (max-width: 600px) {
