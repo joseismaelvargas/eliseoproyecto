@@ -106,9 +106,9 @@ a>i:hover{
     }
     .caja{
         
-        width: 100%;
+        width: 370px;
         margin: 30px auto;
-        height: auto;
+        height: auto; 
     }
     .img-producto{
         width: auto;
@@ -116,7 +116,9 @@ a>i:hover{
     }
     .container-productos{
         display: flex;
-        flex-direction: column;
+      flex-direction: column;
+       
+      
     }
     .carasteristicas{
         font-size: 20px;

@@ -117,7 +117,7 @@ a>i:hover{
 @media only screen and (max-width: 600px) {
     /* form */
     .caja{
-    margin:0px 60px;
+    margin:0px 40px;
     }
      .form{
         margin: 100px auto ;
@@ -130,6 +130,7 @@ a>i:hover{
         border: solid 2px;
         height: 50px;
      }
+    
      
      .nombre{
         font-size: 22px;
