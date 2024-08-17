@@ -25,6 +25,7 @@
 const publicar=()=>{
   
   const array=JSON.parse(localStorage.getItem('producto')) 
+  console.log(array)
   let div=document.getElementById("Productos")
   let producto=array.map(element=>` <div class="caja">
       <div id="carouselExampleCaptions${element.id}" class="carousel slide">

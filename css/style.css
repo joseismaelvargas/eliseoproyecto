@@ -107,24 +107,24 @@ a>i:hover{
     .caja{
         
         width: 100%;
-        margin: 100px auto;
+        margin: 30px auto;
         height: auto;
     }
     .img-producto{
         width: auto;
-        height: 400px;
+        height: 300px;
     }
     .container-productos{
         display: flex;
         flex-direction: column;
     }
     .carasteristicas{
-        font-size: 13px;
+        font-size: 20px;
     }
     .nameproducto{
-        font-size: 35px;
+        font-size: 20px;
     }
     .precio{
-        font-size: 35px;
+        font-size: 20px;
     }
 }

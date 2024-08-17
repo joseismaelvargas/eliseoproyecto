@@ -126,12 +126,14 @@ const dibujar=(element)=>{
               
             }); 
             array.splice(index, 1);
+            document.querySelector(`tr[data-id="${id}"]`).remove();
+             guardar();
           }
         });
          
-          guardar();
          
-          document.querySelector(`tr[data-id="${id}"]`).remove();
+         
+         
       }
   };
 }
