@@ -18,7 +18,7 @@
 }
 /* main */
 .caja{
-    margin: 50px;
+    margin: 50px 10px;
     width: 300px;
     height: auto;
     border-radius: 10px;
@@ -63,11 +63,12 @@ a>i:hover{
 .container-productos{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
-.productos{
+/* .productos{
     display: flex;
     justify-content: space-around;
-}
+} */
 .carasteristicas{
     font-family: sans-serif;
     font-weight: 600;
@@ -94,7 +95,7 @@ a>i:hover{
 .nameproducto{
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 21px;
+    font-size: 25px;
 
 }
 @media only screen and (max-width: 600px) {
@@ -108,7 +109,7 @@ a>i:hover{
         
         width: 370px;
         margin: 30px auto;
-        height: auto; 
+        height: auto;
     }
     .img-producto{
         width: auto;
@@ -116,7 +117,7 @@ a>i:hover{
     }
     .container-productos{
         display: flex;
-      flex-direction: column;
+        flex-direction: column;
        
       
     }
