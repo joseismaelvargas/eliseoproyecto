@@ -14,24 +14,38 @@ class Productos{
 
 
 // capturar
+const modalContacto = new bootstrap.Modal(document.getElementById('modalAdminContacto'))
+const btn=document.getElementById("btnnuevo")
 const form=document.getElementById("form")
 const nombre=document.getElementById("nombre")
 const precio=document.getElementById("precio")
 const foto=document.getElementById("foto")
 const info=document.getElementById("info")
+let estoyCreando=true;
+let idActual;
+
 // 
+const mostrarModal = ()=>{
+  modalContacto.show();
+}
+
+
+
 const array=JSON.parse(localStorage.getItem('producto',))||[]
 
 const funcioform=(e)=>{
-e.preventDefault()
+// e.preventDefault()
+// aqui digo que quiero crear contacto
+
 
  const producto=new Productos(nombre.value,precio.value,info.value,foto.value)
  array.push(producto)
 
-limpiarform()
-guardar()//npmbre nnunca tiene que llamarse localstorage
-
 location.reload()
+limpiarform()
+guardar()
+
+
 
 
 }
@@ -55,36 +69,26 @@ const dibujar=(element)=>{
                 </tr>`
  
     
-       window.editar=(id)=>{
-       const index=array.findIndex(element=>element.id===id)
-       
-       if(index!==-1){ 
-        
-        let newname=prompt("Actualize nombre del producto")
-        let newinfo=prompt("Actualize info")
-        let newfoto=prompt("Actualize imagen del Producto")
-        let newprecio=prompt("Actualize Precio")
-        array[index].nombre=newname;
-        array[index].info=newinfo;
-        array[index].foto=newfoto;
-        array[index].precio=newprecio
-       
-
-       
-         
-
-
-        document.querySelector(`tr[data-id="${id}"]`)
-        location.reload()
-        guardar()
-        Swal.fire("Se edito el Producto "+array[index].nombre);
-
-        
-         
-       }
+ 
+      window.editar=(id)=>{
+        idActual=id;
+        estoyCreando=false;
+     mostrarModal()
+     const encontrarContacto = array.find((contacto) => contacto.id === id)
+     console.log(encontrarContacto)
+     if (encontrarContacto) {
+    
+     nombre.value = encontrarContacto.nombre;
+      foto.value = encontrarContacto.foto;
+     info.value = encontrarContacto.info;
+ 
+     precio.value=encontrarContacto.precio 
+     guardar()
       
-       }
-      window.ver=(id)=>{
+  } 
+console.log(idActual)
+      }
+    window.ver=(id)=>{
   
         const index=array.findIndex(element=>element.id===id)
         if(index!==-1){
@@ -136,9 +140,40 @@ const dibujar=(element)=>{
          
       }
   };
+ 
+     
 }
-
-
+ 
+const addministrar=(e)=>{
+        e.preventDefault()
+      
+        if(estoyCreando){
+          
+         funcioform() 
+        }else{
+          modificar()
+        }
+      }
+const modificar=()=>{
+       let cambiar=array.findIndex((element)=>element.id===idActual)
+       console.log(cambiar)
+       if(cambiar!==-1){
+        array[cambiar].nombre=nombre.value
+        array[cambiar].info=info.value
+        array[cambiar].foto=foto.value
+        array[cambiar].precio=precio.value
+        guardar()
+        Swal.fire({
+          title: "Producto Editado..",
+          text: "!Con Exito!",
+          icon: "success"
+        });
+        modalContacto.hide()
+     
+       }
+   
+      //  location.reload()
+      }
 const limpiarform=()=>{
 
  form.reset()
@@ -146,7 +181,8 @@ const limpiarform=()=>{
 const guardar=()=>{
 localStorage.setItem('producto',JSON.stringify(array))
 }
-console.log(array)
 
-form.addEventListener("submit",funcioform)
+btn.addEventListener("click",mostrarModal)
+
+form.addEventListener("submit",addministrar)
 buscarlocal()//render va al final del codigo

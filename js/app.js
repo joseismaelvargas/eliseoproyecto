@@ -67,13 +67,17 @@ const publicar=()=>{
        </div>
       
        <p class="precio">$${element.precio}</p>
+       <button class="btn btn-primary" onclick=verproducto(${element.id})>Ver</button>
        <a href="" class="WhatsApp">
         <i class="WhatsApp bi bi-whatsapp"></i>
        </a>
       </div>
     </div>`)
   div.innerHTML=producto
+window.verproducto=(id)=>{
+  window.location.href='/page/detalles.html?id='+id
 
+}
 
 }
 publicar()
