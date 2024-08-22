@@ -67,7 +67,8 @@ const publicar=()=>{
        </div>
       
        <p class="precio">$${element.precio}</p>
-       <button class="btn btn-primary" onclick=verproducto(${element.id})>Ver</button>
+       <button class="btn btn-primary" onclick=verproducto(${element.id})>Ver detalles</button><br>
+
        <a href="" class="WhatsApp">
         <i class="WhatsApp bi bi-whatsapp"></i>
        </a>

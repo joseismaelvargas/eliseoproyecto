@@ -20,22 +20,28 @@
 .caja{
     margin: 50px 10px;
     width: 300px;
-    height: auto;
+    height: 350;
     border-radius: 10px;
     /* border: solid rgb(85, 83, 83) 2px; */
+    background-color: #dae0e0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
    
 }
-.caja:hover{
+/* .caja:hover{
   box-shadow: 6px 6px 3px rgb(129, 126, 126);   
-}
+} */
 .vermas{
     text-decoration: none;
     border: none;
 }
 .info{
-    display: flex;
-    flex-direction: column;
-    text-align: start;
+    /* display: flex; */
+    /* flex-direction: column;
+    text-align: start; */
+    text-align: center;
+    /* margin: 0px 6px; */
 
 }
 
@@ -60,26 +66,60 @@ a>i:hover{
     color: rgb(107, 105, 105);
 }
 /* cajasproducts */
+.logo-main{
+    width: 150px;
+    border-radius:100px;
+    margin: 50px 500px;
+    display: flex;
+    
+}
 .container-productos{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: white;
+    /* margin: 100px; */
+    border-radius: 14px;
+    /* border: solid rgba(150, 141, 141, 0.877) 3px; */
+    width: 100%;
+    /* margin: 10px; */
+   
 }
 /* .productos{
     display: flex;
     justify-content: space-around;
 } */
+ .seccionproducto{
+    background-color: #8BC6EC;
+background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+    
+ display: flex;
+ flex-direction: column;
+ 
+ }
 .carasteristicas{
     font-family: sans-serif;
-    font-weight: 600;
-    color: rgb(20, 89, 145);
+    font-weight: 400;
+    color: rgb(119, 120, 121);
+    text-align: center;
+    margin: 0px 7px;
     
 }
 .precio{
     font-family: sans-serif;
     font-weight: bold;
     font-size: 20px;
+    text-align: center;
+   width: 150px;
+   height: 50px;
+   margin: 0px auto;
+   border-radius: 10px;
+   color: white;
+   padding: 10px;
+    background-color: rgb(55, 121, 221);
 }
+
 .WhatsApp{
     font-size: 40px;
     color: green;
@@ -98,6 +138,12 @@ a>i:hover{
     font-size: 25px;
 
 }
+.btn{
+    margin: 7px 10px;
+    width: 150px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
 @media only screen and (max-width: 600px) {
     .logo-footer{
         width: 40px;
@@ -108,7 +154,7 @@ a>i:hover{
     .caja{
         
         width: 370px;
-        margin: 30px auto;
+        margin: 50px auto;
         height: auto;
     }
     .img-producto{
@@ -118,6 +164,7 @@ a>i:hover{
     .container-productos{
         display: flex;
         flex-direction: column;
+        margin: 0px auto;
        
       
     }
@@ -129,5 +176,8 @@ a>i:hover{
     }
     .precio{
         font-size: 20px;
+    }
+    .logo-main{
+        margin: 30px auto;
     }
 }
