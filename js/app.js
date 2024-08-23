@@ -28,34 +28,8 @@ const publicar=()=>{
   console.log(array)
   let div=document.getElementById("Productos")
   let producto=array.map(element=>` <div class="caja">
-      <div id="carouselExampleCaptions${element.id}" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions${element.id}" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions${element.id}" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="imgproductos carousel-inner">
-          <div class="carousel-item active">
-            <img src="${element.foto}" class="img-producto d-block w-100" alt="...">
-            
-          </div>
-          <div class="carousel-item">
-            <img src="${element.foto}" class="img-producto d-block w-100" alt="...">
-           
-          </div>
-          <div class="carousel-item">
-            <img src="${element.foto}" class="img-producto d-block w-100" alt="...">
-            
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions${element.id}" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions${element.id}" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+      <div>
+      <img src="${element.foto}" alt="img" class="img-producto d-block w-100">
       </div>
       <hr>
 
@@ -66,7 +40,7 @@ const publicar=()=>{
          
        </div>
       
-       <p class="precio">$${element.precio}</p>
+       <p class="precio btn-primary">$${element.precio}</p>
        <button class="btn btn-primary" onclick=verproducto(${element.id})>Ver detalles</button><br>
 
        <a href="" class="WhatsApp">
