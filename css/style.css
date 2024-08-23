@@ -144,7 +144,7 @@ background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
     font-family: sans-serif;
     font-weight: bold;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
     .logo-footer{
         width: 40px;
     }
@@ -153,7 +153,7 @@ background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
     }
     .caja{
         
-        width: 370px;
+        width: 300px;
         margin: 50px auto;
         height: auto;
     }
